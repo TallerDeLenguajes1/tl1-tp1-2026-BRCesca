@@ -1,4 +1,4 @@
-# Trabajo 1 - Punto 2
+# Trabajo práctico 1
 
 ## Respuestas sobre .gitignore
 
@@ -47,3 +47,18 @@ Se renombraron las funciones originales para cumplir con las reglas de *Clean Co
 * `invertir_entero` (antes `f_alpha`): Realiza la inversión de los dígitos mediante el resto (`% 10`) y la división por 10.
 * `mitad_entero` (antes `f_beta`): Ejecuta una división entera por 2 sobre el valor de referencia.
 * `sumar_digitos_al_entero` (antes `f_gamma`): Descompone el número para sumar sus componentes e incrementa el valor original con dicho resultado.
+---
+
+## Análisis de memoria y punteros
+
+### Respuestas sobre direcciones de memoria
+
+* **¿Por qué los resultados de los apartados 2 y 3 son el mismo?**
+  Esto sucede porque un puntero es una variable que almacena una dirección de memoria. Al realizar la asignación `puntero = &variable`, el valor que guarda el puntero pasa a ser exactamente la ubicación física de la variable en la memoria RAM . Por eso, al imprimirlos, el valor coincide.
+
+* **¿Qué obtiene en el punto 4? ¿Es igual a los anteriores? ¿Por qué?**
+  En el punto 4 se obtiene la **dirección de memoria del propio puntero**. 
+  **No es igual a los anteriores.** Esto se debe a que el puntero es, en sí mismo, una variable declarada en el programa. Como toda variable, el sistema operativo debe asignarle un espacio propio en la memoria para que pueda guardar el dato (que en este caso es la dirección de otra variable). Por lo tanto, el puntero "vive" en una dirección de memoria distinta a la de la variable a la que apunta.
+
+
+---
